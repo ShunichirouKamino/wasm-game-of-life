@@ -85,6 +85,18 @@ $ wasm-pack build
 | lib crate | ライブラリを作るクレート。`lib.rs` をルートとしてコンパイルされたクレート。                                                                                                                           |
 | bin crate | 実行可能ファイルを作るクレート。`main.rs`をルートとしてコンパイルされたクレート。                                                                                                                     |
 
+## 📗 Rules of Application
+
+ライフゲームのルール。
+- 誕生
+  - 死んでいるセルに隣接する生きたセルがちょうど3つあれば、次の世代が誕生する。
+- 生存
+  - 生きているセルに隣接する生きたセルが2つか3つならば、次の世代でも生存する。
+- 過疎
+  - 生きているセルに隣接する生きたセルが1つ以下ならば、過疎により死滅する。
+- 過密
+  - 生きているセルに隣接する生きたセルが4つ以上ならば、過密により死滅する。
+
 ## 📗Refer
 
 - [Tutorial: Life game](https://moshg.github.io/rustwasm-book-ja/game-of-life/introduction.html)
